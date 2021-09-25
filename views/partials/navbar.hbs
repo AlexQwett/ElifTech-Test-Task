@@ -1,0 +1,25 @@
+  <nav class="#f57f17 yellow darken-4">
+    <div class="nav-wrapper">
+      <a href="/" class="brand-logo">Banks management</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+
+        {{#if isBMP}}
+        <li class="active"><a href="/">Banks management page</a></li>
+        {{else}}
+        <li><a href="/">Banks management page</a></li>
+        {{/if}}
+
+        {{#if isCreate}}
+        <li class="active"><a href="/create">Create</a></li>
+        {{else}}
+        <li><a href="/create">Create</a></li>
+        {{/if}}
+
+        <li>
+          <form action="/calculator" method="POST">
+            <button type="submit" class="btnNone">Mortgage calculator page</button>
+          </form>
+        </li>
+      </ul>
+    </div>
+  </nav>

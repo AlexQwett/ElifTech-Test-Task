@@ -1,0 +1,53 @@
+<form action="/create" method="POST">
+    <h2>Create Bank</h2>
+
+    <div class="input">
+        <input type="text" name="bankName" value="{{bankName}}">
+        <label>Bank name</label>
+    </div>
+    {{#if emptyName}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+    
+    <div class="input">
+        <input type="number" name="interesRate" value="{{interestRate}}">
+        <label>Interest rate(% per year)</label>
+    </div>
+    {{#if emptyIntrsRate}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name="maximumLoan" value="{{maximumLoan}}">
+        <label>Maximum loan</label>
+    </div>
+    {{#if emptyMaxLoan}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name="minLoan" value="{{minLoan}}">
+        <label>Maximum loan</label>
+    </div>
+    {{#if emptyMinLoan}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name= "minimumDownPayment" value="{{minimumDownPayment}}">
+        <label>Minimum down payment(%)</label>
+    </div>
+    {{#if emptyMinDownPaymnt}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name="loanTerm" value="{{loanTerm}}">
+        <label>Loan term(month)</label>
+    </div>
+    {{#if emptyLoanTerm}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <button type="submit" class="btn">Create</button>
+</form>

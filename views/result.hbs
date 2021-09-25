@@ -1,0 +1,9 @@
+<form action="/" method="get">
+    {{#if result}}
+    <p>This bank can give you a loan for {{term}} months with a monthly fee of {{monthPayment}}</p>
+    {{else}}
+    <p>This bank cannot provide you with a loan on your terms. Change the bank or credit terms</p>
+    {{/if}}
+
+    <button type="submit" class="btn">Home</button>
+</form>

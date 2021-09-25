@@ -1,0 +1,30 @@
+<form action="/calculate" method="post">
+    <h2>Mortgage calculator page</h2>  
+    
+    <div class="input">
+        <input type="text" name="bankName" value="{{bankName}}">
+        <label>Bank name</label>
+    </div>    
+
+    {{#if incorrectName}}
+        <h6 class="massage">Write a correct name</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name="initialLoan" value="{{initialLoan}}">
+        <label>Initial loan</label>
+    </div>
+    {{#if emptyInitLoan}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <div class="input">
+        <input type="number" name="userDownPayment" value="{{minDownPayment}}">
+        <label>Down payment</label>
+    </div>
+    {{#if emptyMinDwnPamnt}}
+        <h6 class="massage">This field is required</h6>
+    {{/if}}
+
+    <button type="submit" class="btn">Calculate</button>
+</form>

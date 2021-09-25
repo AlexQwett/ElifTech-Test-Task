@@ -1,0 +1,36 @@
+<h2>Banks management page</h2>
+
+{{#if banks.length}}
+<ul>
+    {{#each banks}}
+    <li>
+        <hr class="line" color="#f57f17">
+        <div class="bankConteiner">
+            <label class="bnk">
+                <div>
+                    <p class="items"><span class="titleItems">Name: </span>{{bankName}}</p>
+                    <p class="items"><span class="titleItems">Interest Rate: </span>{{interestRate}}%</p>
+                    <p class="items"><span class="titleItems">Maximum Loan: </span>{{maximumLoan}}$</p>
+                    <p class="items"><span class="titleItems">Minimum Loan: </span>{{minLoan}}$</p>
+                    <p class="items"><span class="titleItems">Minimum Down Payment: </span>{{minimumDownPayment}}%</p>
+                    <p class="items"><span class="titleItems">Loan Term: </span>{{loanTerm}} months</p>
+                </div>
+            </label>
+            <div class="buttons">
+                <form action="/edit" method="POST">
+                    <input type="hidden" value="{{_id}}" name="id">
+                    <button class="btn" type="submit">Edit</button>
+                </form>
+
+                <form action="/removing" method="POST">
+                    <input type="hidden" value="{{_id}}" name="id">
+                    <button class="btn" type="submit">Remove</button>
+                </form>
+            </div>
+        </div>
+    </li>
+    {{/each}}
+</ul>
+{{else}}
+<p>There are currently no active banks. To add a bank to the list, click the "create" button and enter the data.</p>
+{{/if}}

@@ -1,0 +1,36 @@
+<form action="/editing" method="POST">
+    <h2>Edit your current Bank</h2>
+
+    <div class="input">
+        <input type="text" name="bankName" value="{{bank.bankName}}">
+        <label>Bank name</label>
+    </div>
+    
+    <div class="input">
+        <input type="number" name="interestRate" value="{{bank.interestRate}}">
+        <label>Interest rate(% per year)</label>
+    </div>
+
+    <div class="input">
+        <input type="number" name="maximumLoan" value="{{bank.maximumLoan}}">
+        <label>Maximum loan</label>
+    </div>
+
+    <div class="input">
+        <input type="number" name="minimumLoan" value="{{bank.minLoan}}">
+        <label>Minimum loan</label>
+    </div>
+    
+    <div class="input">
+        <input type="number" name= "minimumDownPayment" value="{{bank.minimumDownPayment}}">
+        <label>Minimum down payment(%)</label>
+    </div>
+
+    <div class="input">
+        <input type="number" name="loanTerm" value="{{bank.loanTerm}}">
+        <label>Loan term(month)</label>
+    </div>
+
+    <input type="hidden" value="{{id}}" name="id">
+    <button type="submit" class="btn">Edit</button>
+</form>
